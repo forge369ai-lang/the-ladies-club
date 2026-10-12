@@ -108,8 +108,9 @@ section{padding:96px 0}
 .visit{display:grid;grid-template-columns:1fr 1fr;gap:56px}
 dl{display:grid;grid-template-columns:auto 1fr;gap:12px 36px;margin:24px 0 30px}
 dt{font-weight:600}dd{color:var(--muted)}
-.mens{background:var(--ink);color:#fff;border-radius:24px;padding:36px}
-.mens h3{font-size:1.8rem;margin-bottom:10px}.mens p{opacity:.8;margin-bottom:22px}
+.mens{color:#fff;border-radius:24px;padding:36px;min-height:340px;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(180deg,rgba(22,20,20,.15) 0%,rgba(22,20,20,.55) 45%,rgba(22,20,20,.92) 100%),url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1100&q=80") center/cover,var(--ink)}
+.mens .btn{align-self:flex-start}
+.mens h3{font-size:1.9rem;margin-bottom:10px}.mens p{opacity:.92;margin-bottom:22px;max-width:30em}
 
 footer{padding:40px 0 100px;color:var(--muted);font-size:.95rem}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
@@ -270,7 +271,7 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--rose)}
         <a class="btn btn-light" href="https://www.google.com/maps/search/?api=1&query=The+Ladies+Club+Knysna+Mall" target="_blank" rel="noopener">Get directions</a>
       </div>
     </div>
-    <div class="mens">
+    <div class="mens" role="img" aria-label="Man in a barber's chair at The Men's Club" >
       <h3>Bringing him along?</h3>
       <p>The Men's Club is right across the way, for cuts, beard trims and shaves. Book you both in at the same time.</p>
       <a class="btn btn-rose" href="tel:+27443822521">Call The Men's Club</a>
