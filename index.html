@@ -7,9 +7,9 @@
 <title>The Ladies Club | Hair salon, Knysna Mall</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,600;1,6..96,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#161414;--ivory:#FAF6F1;--blush:#EFD9D0;--rose:#B97A6A;--muted:#6B625D;--line:#E6DCD4;--white:#fff;--d:"Bodoni Moda",Georgia,serif;--b:"Jost",system-ui,sans-serif}
+:root{--ink:#161414;--ivory:#FAF6F1;--blush:#EFD9D0;--rose:#B97A6A;--muted:#6B625D;--line:#E6DCD4;--white:#fff;--d:"Playfair Display",Georgia,serif;--b:"Jost",system-ui,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:var(--b);color:var(--ink);background:var(--white);font-size:1.05rem;line-height:1.6;-webkit-font-smoothing:antialiased}
@@ -21,7 +21,7 @@ button{font:inherit;cursor:pointer}
 .preview{background:var(--ink);color:#fff;text-align:center;font-size:.85rem;padding:9px 16px}
 .promo{background:var(--blush);text-align:center;font-size:.95rem;padding:10px 16px}
 .promo b{font-weight:600}
-h1,h2,h3{font-family:var(--d);font-weight:600;letter-spacing:-.01em}
+h1,h2,h3{font-family:var(--d);font-weight:600;letter-spacing:0}
 h2{font-size:clamp(2.1rem,4vw,3.2rem);line-height:1.05;margin-bottom:14px}
 .sub{color:var(--muted);max-width:34em;margin-bottom:40px}
 .opt{display:inline-block;font-family:var(--b);font-size:.75rem;font-weight:600;color:var(--rose);border:1px solid var(--rose);border-radius:999px;padding:2px 10px;margin-left:10px;vertical-align:middle;letter-spacing:0}
@@ -46,7 +46,7 @@ section{padding:96px 0}
 .status{display:inline-flex;align-items:center;gap:8px;font-weight:500;color:var(--muted);margin-bottom:18px}
 .status i{width:9px;height:9px;border-radius:50%;background:#3E9B6B;box-shadow:0 0 0 4px rgba(62,155,107,.18)}
 .status.closed i{background:#B8AFA9;box-shadow:none}
-.hero h1{font-size:clamp(3rem,6vw,5.4rem);line-height:.98;margin-bottom:22px}
+.hero h1{font-size:clamp(2.8rem,5.2vw,4.6rem);line-height:1.05;margin-bottom:22px}
 .hero h1 em{font-weight:500}
 .hero p.lead{font-size:1.2rem;color:var(--muted);max-width:28em;margin-bottom:30px}
 .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
@@ -92,10 +92,17 @@ section{padding:96px 0}
 
 /* reviews */
 .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.quote{background:#fff;border-radius:22px;padding:28px;border:1px solid var(--line);color:var(--muted);font-size:.92rem}
-.quote p{font-family:var(--d);font-style:italic;font-size:1.15rem;color:var(--ink);margin-bottom:12px}
-.big-rating{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-bottom:36px}
-.big-rating strong{font-family:var(--d);font-size:3.6rem;line-height:1}
+.quote{background:#fff;border-radius:22px;padding:30px;box-shadow:0 18px 40px -26px rgba(22,20,20,.35);display:flex;flex-direction:column;position:relative}
+.quote::before{content:"\201C";position:absolute;top:6px;right:22px;font-family:var(--d);font-size:5rem;line-height:1;color:var(--blush)}
+.qstars{color:#E8A43A;font-size:1.15rem;letter-spacing:3px;margin-bottom:14px}
+.quote p{font-family:var(--d);font-size:1.18rem;line-height:1.45;color:var(--ink);margin-bottom:22px;flex:1;position:relative}
+.qby{display:flex;align-items:center;gap:10px;font-size:.9rem;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
+.qby svg{width:20px;height:20px;flex:none}
+.qby b{color:var(--ink);font-weight:600;display:block}
+.big-rating{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-bottom:36px;background:var(--ivory);border-radius:22px;padding:22px 28px;width:fit-content}
+.big-rating strong{font-family:var(--d);font-size:3.4rem;line-height:1}
+.big-rating .bstars{color:#E8A43A;font-size:1.5rem;letter-spacing:3px;display:block}
+.big-rating a{color:var(--muted);font-size:.95rem}
 
 /* visit */
 .visit{display:grid;grid-template-columns:1fr 1fr;gap:56px}
@@ -243,11 +250,11 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--rose)}
 <section>
   <div class="wrap">
     <h2>What our clients say</h2>
-    <div class="big-rating"><strong>4.7</strong><div><span style="color:var(--rose);letter-spacing:2px">★★★★★</span><br><a href="https://www.google.com/maps/search/?api=1&query=The+Ladies+Club+Knysna" target="_blank" rel="noopener">Read all our Google reviews</a></div></div>
+    <div class="big-rating"><strong>4.7</strong><div><span class="bstars" aria-label="4.7 out of 5 stars">★★★★★</span><a href="https://www.google.com/maps/search/?api=1&query=The+Ladies+Club+Knysna" target="_blank" rel="noopener">Based on Google reviews. Read them all</a></div></div>
     <div class="reviews">
-      <div class="quote"><p>"Treated like a queen to delicious coffee served in the best china."</p>Google review</div>
-      <div class="quote"><p>"Outstanding service. I walked in with no booking and was greeted friendly and helped immediately. Competent, highly skilled ladies."</p>Google review</div>
-      <div class="quote"><p>"The ladies working there were exceptionally lovely, helpful and accommodating."</p>Google review</div>
+      <div class="quote"><div class="qstars" aria-label="5 stars">★★★★★</div><p>Treated like a queen to delicious coffee served in the best china.</p><div class="qby"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg><span><b>Google review</b>Ready for a daughter's big day</span></div></div>
+      <div class="quote"><div class="qstars" aria-label="5 stars">★★★★★</div><p>Outstanding service. I walked in with no booking and was greeted friendly and helped immediately. Competent, highly skilled ladies.</p><div class="qby"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg><span><b>Google review</b>Walk-in wash and blow-dry</span></div></div>
+      <div class="quote"><div class="qstars" aria-label="5 stars">★★★★★</div><p>Absolutely brilliant service after another hairdresser dropped us last minute. I highly recommend you guys.</p><div class="qby"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg><span><b>Google review</b>Last-minute rescue</span></div></div>
     </div>
   </div>
 </section>
