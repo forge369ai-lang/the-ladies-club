@@ -58,7 +58,9 @@ section{padding:96px 0}
 
 /* services */
 .services{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.svc{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;display:flex;flex-direction:column}
+.svc{background:#fff;border:1px solid var(--line);border-radius:22px;padding:14px 14px 24px;display:flex;flex-direction:column;overflow:hidden}
+.svc-img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:14px;margin-bottom:18px;background:var(--blush)}
+.svc h3,.svc p,.svc .row{padding:0 12px}
 .svc h3{font-size:1.45rem;margin-bottom:6px}
 .svc p{color:var(--muted);font-size:.98rem;flex:1;margin-bottom:18px}
 .svc .row{display:flex;justify-content:space-between;align-items:center;gap:10px}
@@ -191,12 +193,12 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--rose)}
     <h2>Our services</h2>
     <p class="sub">Choose a service and book in under a minute. Walk-ins are always welcome too.</p>
     <div class="services">
-      <div class="svc"><h3>Wash &amp; blow-dry</h3><p>In and out looking polished. Our most popular service, and perfect before a night out.</p><div class="row"><span class="price">From R___<small>Price to confirm</small></span><button class="btn btn-dark" data-book="Wash & blow-dry">Book now</button></div></div>
-      <div class="svc"><h3>Cut &amp; style</h3><p>A fresh cut shaped to suit your hair and your face, finished with a style.</p><div class="row"><span class="price">From R___<small>Price to confirm</small></span><button class="btn btn-dark" data-book="Cut & style">Book now</button></div></div>
-      <div class="svc"><h3>Colour &amp; highlights</h3><p>Full colour, foils, roots and toning. We'll talk it through with you first.</p><div class="row"><span class="price">From R___<small>Price to confirm</small></span><button class="btn btn-dark" data-book="Colour & highlights">Book now</button></div></div>
-      <div class="svc"><h3>Hair treatments</h3><p>Conditioning and smoothing treatments to bring your hair back to life.</p><div class="row"><span class="price">From R___<small>Price to confirm</small></span><button class="btn btn-dark" data-book="Hair treatment">Book now</button></div></div>
-      <div class="svc"><h3>Kids' cuts</h3><p>Quick, gentle and patient. Little ones are always welcome.</p><div class="row"><span class="price">From R___<small>Price to confirm</small></span><button class="btn btn-dark" data-book="Kids' cut">Book now</button></div></div>
-      <div class="svc"><h3>Special occasions</h3><p>Weddings, mothers of the bride and big family days. Book early for the date.</p><div class="row"><span class="price">Quote<small>On request</small></span><button class="btn btn-dark" data-book="Special occasion">Book now</button></div></div>
+      <div class="svc"><img class="svc-img" loading="lazy" src="https://images.unsplash.com/photo-1734111719430-fe4a3973f8af?auto=format&fit=crop&w=700&h=440&q=75" alt="Stylist blow-drying blonde hair with a round brush"><h3>Wash &amp; blow-dry</h3><p>In and out looking polished. Our most popular service, and perfect before a night out.</p><div class="row"><span class="price">From R___<small>Price to confirm</small></span><button class="btn btn-dark" data-book="Wash & blow-dry">Book now</button></div></div>
+      <div class="svc"><img class="svc-img" loading="lazy" src="https://images.unsplash.com/photo-1779350676620-fde279b1d023?auto=format&fit=crop&w=700&h=440&q=75" alt="Freshly cut sleek brown hair"><h3>Cut &amp; style</h3><p>A fresh cut shaped to suit your hair and your face, finished with a style.</p><div class="row"><span class="price">From R___<small>Price to confirm</small></span><button class="btn btn-dark" data-book="Cut & style">Book now</button></div></div>
+      <div class="svc"><img class="svc-img" loading="lazy" src="https://images.unsplash.com/photo-1617391654484-2894196c2cc9?auto=format&fit=crop&w=700&h=440&q=75" alt="Stylist applying colour foils"><h3>Colour &amp; highlights</h3><p>Full colour, foils, roots and toning. We'll talk it through with you first.</p><div class="row"><span class="price">From R___<small>Price to confirm</small></span><button class="btn btn-dark" data-book="Colour & highlights">Book now</button></div></div>
+      <div class="svc"><img class="svc-img" loading="lazy" src="https://images.unsplash.com/photo-1785456283212-338f5bc44d50?auto=format&fit=crop&w=700&h=440&q=75" alt="Glossy, healthy wavy hair"><h3>Hair treatments</h3><p>Conditioning and smoothing treatments to bring your hair back to life.</p><div class="row"><span class="price">From R___<small>Price to confirm</small></span><button class="btn btn-dark" data-book="Hair treatment">Book now</button></div></div>
+      <div class="svc"><img class="svc-img" loading="lazy" src="https://images.unsplash.com/photo-1704072650662-76df3af134a7?auto=format&fit=crop&w=700&h=440&q=75" alt="Boy in a salon cape after a haircut"><h3>Kids' cuts</h3><p>Quick, gentle and patient. Little ones are always welcome.</p><div class="row"><span class="price">From R___<small>Price to confirm</small></span><button class="btn btn-dark" data-book="Kids' cut">Book now</button></div></div>
+      <div class="svc"><img class="svc-img" loading="lazy" src="https://images.unsplash.com/photo-1549236177-77e8271c34b6?auto=format&fit=crop&w=700&h=440&q=75" alt="Bridal hairstyle with a jewelled hairpiece"><h3>Special occasions</h3><p>Weddings, mothers of the bride and big family days. Book early for the date.</p><div class="row"><span class="price">Quote<small>On request</small></span><button class="btn btn-dark" data-book="Special occasion">Book now</button></div></div>
     </div>
   </div>
 </section>
